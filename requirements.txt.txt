@@ -1,0 +1,4 @@
+Python IDE, MySQL workbench and the following libraries:
+MySQL-connector-python
+datetime
+tkinter

@@ -1,0 +1,26 @@
+-- Create the main database
+CREATE DATABASE IF NOT EXISTS billing_project;
+
+-- Use the database
+USE billing_project;
+
+-- Create accounts table
+CREATE TABLE IF NOT EXISTS accounts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(50) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    date_created DATE,
+    desig VARCHAR(20)
+);
+
+-- Create products table
+CREATE TABLE IF NOT EXISTS products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_n VARCHAR(100),
+    price FLOAT,
+    pcp VARCHAR(50),
+    instock INT
+);
+
+-- Create a separate schema for dynamic bill tables (used in CLI version)
+CREATE SCHEMA IF NOT EXISTS bills_proj;
